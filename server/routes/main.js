@@ -29,7 +29,6 @@ router.get('/home', async (req, res) => {
          data,
          current: page,
          nextPage: hasNextPage ? nextPage : null,
-         currentRoute: '/home'
       });
    } catch (error) {
       console.log(error)
@@ -56,8 +55,7 @@ router.get('/post/:id', async (req, res) => {
       const data = await Post.findById({ _id: slug });
       const locals = {
          title: data.title,
-         description: "Simple Blog created with NodeJS, Express & MongoDB",
-         currentRoute: `/post/${slug}`
+         description: "Simple Blog created with NodeJS, Express & MongoDB"
       }
       res.render('post', { locals, data })
    } catch (error) {
@@ -92,14 +90,12 @@ router.post('/search', async (req, res) => {
 
 
 router.get('/about', (req, res) => {
-   res.render('about',{
-      currentRoute: '/about'
+   res.render('about', {
    })
 })
 
 router.get('/contact', (req, res) => {
    res.render('contact', {
-      currentRoute: '/contact'
    })
 })
 
