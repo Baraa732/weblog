@@ -1,0 +1,36 @@
+<div class="author">
+   <h1 class="author__heading">Hi, Iam Baraa</h1>
+   <p class="author__body">Web developer and content creator</p>
+</div>
+
+<img src="/images/BlogImage.png" alt="person looking out through window" class="hero-image" width="981" height="528">
+
+<section>
+   <h1 class="articles__heading">Latest Posts</h1>
+
+   <ul class="article-ul">
+      <% data.forEach(post=> { %>
+         <li>
+            <a href="/post/<%= post._id %>">
+               <span>
+                  <%= post.title %>
+               </span>
+               <span class="article-list__date">
+                  <%= post.createdAt.toDateString() %>
+               </span>
+            </a>
+         </li>
+         <% }) %>
+   </ul>
+   <% if (nextPage !== null) { %>
+      <a href="/home?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+   <% } %>
+
+</section>
+<script>
+   window.addEventListener("pageshow", function (event) {
+      if (event.persisted) {
+         window.location.reload();
+      }
+   });
+</script>

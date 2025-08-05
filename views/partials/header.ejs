@@ -1,0 +1,27 @@
+<header class="header">
+   <a href="/home" class="header__logo">NodeJS</a>
+
+   <nav class="header__nav">
+      <ul>
+         <li>
+            <a href="/home" class="<%= isActiveRoute('/home', currentRoute) %>">Home</a>
+         </li>
+         <li>
+            <a href="/about" class="<%= isActiveRoute('/about', currentRoute) %> ">About</a>
+         </li>
+         <li>
+            <a href="/contact" class="<%= isActiveRoute('/contact', currentRoute) %> ">Contact</a>
+         </li>
+      </ul>
+   </nav>
+
+   <div class="header__button">
+      <a class="searchBtn" aria-expanded="false">
+         Search
+         <img alt="svgImg"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgMTYgMTYiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPjxwYXRoIGQ9Ik0xMy40MzgsMTUuNTYzbC0yLjY2NS0yLjY2NAlDOS42ODQsMTMuNTk4LDguMzg4LDE0LjAwMiw3LDE0LjAwMmMtMy44NjUsMC03LTMuMTM1LTctN2MwLTMuODY0LDMuMTM1LTcsNy03YzMuODY0LDAsNywzLjEzNiw3LDcJYzAsMS4zOTEtMC40MDcsMi42ODctMS4xMDUsMy43NzZsMi42NjUsMi42NjRjMC41ODUsMC41ODUsMC41ODUsMS41MzYsMCwyLjEyMUMxNC45NzQsMTYuMTQ4LDE0LjAyNCwxNi4xNDgsMTMuNDM4LDE1LjU2M3ogTTEyLDcuMDAyYzAtMi43NTktMi4yNDEtNS01LTVjLTIuNzYsMC01LDIuMjQxLTUsNWMwLDIuNzYsMi4yNCw1LDUsNUM5Ljc1OSwxMi4wMDIsMTIsOS43NjIsMTIsNy4wMDJ6Ii8+PC9zdmc+" />
+
+      </a>
+   </div>
+
+</header>
