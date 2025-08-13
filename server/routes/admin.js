@@ -133,7 +133,8 @@ router.put('/edit-post/:id', authMiddleware, async (req, res) => {
          body: req.body.body,
          updatedAt: Date.now()
       })
-      res.redirect(`/edit-post/${req.params.id}`)
+      res.redirect('/dashboard')
+      // res.redirect(`/edit-post/${req.params.id}`)
    } catch (error) {
       console.log(error)
    }
